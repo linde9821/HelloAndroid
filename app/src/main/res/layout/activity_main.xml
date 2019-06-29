@@ -3,10 +3,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:swipebtn="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/nachricht"
+        android:lines="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -23,5 +26,33 @@
         android:id="@+id/weiter_fertig"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"/>
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"/>
+
+    <com.ebanx.swipebtn.SwipeButton
+        android:id="@+id/swipe_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        swipebtn:inner_text="SWIPE"
+        swipebtn:inner_text_color="@android:color/white"
+        swipebtn:inner_text_size="16sp"
+        swipebtn:inner_text_top_padding="18dp"
+        swipebtn:inner_text_bottom_padding="18dp"
+        swipebtn:inner_text_background="@drawable/shape_rounded"
+        swipebtn:button_image_height="60dp"
+        swipebtn:button_image_width="100dp"
+        swipebtn:button_image_disabled="@drawable/ic_lock_open_black_24dp"
+        swipebtn:button_image_enabled="@drawable/ic_lock_outline_black_24dp"
+        swipebtn:button_left_padding="20dp"
+        swipebtn:button_right_padding="20dp"
+        swipebtn:button_top_padding="20dp"
+        swipebtn:button_bottom_padding="20dp"
+        swipebtn:button_background="@drawable/shape_button"
+        swipebtn:initial_state="disabled"
+        swipebtn:has_activate_state="true"
+        />
+
 </LinearLayout>
